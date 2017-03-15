@@ -1,5 +1,5 @@
 Algorithmic March Madness Tournament Prediction for Kaggle's Annual
-[https://www.kaggle.com/c/march-machine-learning-mania-2017][March Machine Learning Mania 2017]
+March Machine Learning Mania 2017 (https://www.kaggle.com/c/march-machine-learning-mania-2017)
 All data needed data is available from them (they'd be here but their licensing prohibits it).
 
 This attempt is much simpler than my Non-negative matrix factorization, and PCA with season
@@ -12,4 +12,22 @@ tournament.
 Despite being fairly simplistic, it actually predicts "quite well" corresponding to what experts
 are predicting.
 
+This code allows you to adjust weighting for years, what components are used to derive
+the weighting of the edge in the graph, as well as various components of the difference
+in scores.
+
+Results:
+['Villanova', "Mt St Mary's", 'Wisconsin', 'Virginia Tech', 'Virginia', 'UNC Wilmington', 'Florida', 'ETSU', 'SMU', 'Providence', 'Baylor', 'New Mexico St', 'South Carolina', 'Marquette', 'Duke', 'Troy', 'Gonzaga', 'South Dakota', 'Northwestern', 'Vanderbilt', 'Notre Dame', 'Princeton', 'West Virginia', 'Bucknell', 'Maryland', 'Xavier', 'FL Gulf Coast', 'Florida St', "St Mary's CA", 'VA Commonwealth', 'Arizona', 'North Dakota', 'Kansas', 'NC Central', 'Miami FL', 'Michigan St', 'Iowa St', 'Nevada', 'Purdue', 'Vermont', 'Creighton', 'Rhode Island', 'Oregon', 'Iona', 'Michigan', 'Oklahoma St', 'Louisville', 'Jacksonville St', 'North Carolina', 'TX Southern', 'Arkansas', 'Seton Hall', 'Minnesota', 'Tennessee', 'Butler', 'Winthrop', 'Cincinnati', 'Wake Forest', 'UCLA', 'Kent', 'Dayton', 'Wichita St', 'Kentucky', 'N Kentucky']
+---------------
+['Villanova', 'Wisconsin', 'Virginia', 'Florida', 'SMU', 'Baylor', 'Marquette', 'Duke', 'Gonzaga', 'Vanderbilt', 'Princeton', 'West Virginia', 'Xavier', 'Florida St', 'VA Commonwealth', 'Arizona', 'Kansas', 'Michigan St', 'Iowa St', 'Purdue', 'Creighton', 'Oregon', 'Michigan', 'Louisville', 'North Carolina', 'Seton Hall', 'Tennessee', 'Butler', 'Cincinnati', 'UCLA', 'Wichita St', 'Kentucky']
+---------------
+['Villanova', 'Virginia', 'SMU', 'Duke', 'Gonzaga', 'West Virginia', 'Xavier', 'Arizona', 'Kansas', 'Iowa St', 'Oregon', 'Louisville', 'North Carolina', 'Butler', 'Cincinnati', 'Kentucky']
+---------------
+['Villanova', 'SMU', 'Gonzaga', 'Arizona', 'Kansas', 'Louisville', 'North Carolina', 'Cincinnati']
+---------------
+['Villanova', 'Gonzaga', 'Kansas', 'North Carolina']
+---------------
+['Villanova', 'Kansas']
+---------------
+['Villanova']
 
