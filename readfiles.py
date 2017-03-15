@@ -31,7 +31,8 @@ def readteams():
 #season,day, Wteam,Wscore,Lteam,Lscore
 season = 2016
 def readresults(teams,fromyears,computeval):
-    incidencematrix = np.zeros([len(teams),len(teams)])
+    n = len(teams)
+    incidencematrix = np.zeros([n,n])-np.eye(n,n)
     #read tourneys
     lines = tourneycsv.readlines()
     for line in lines[1:]:
