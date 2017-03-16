@@ -1,10 +1,13 @@
 Algorithmic March Madness Tournament Prediction for Kaggle's Annual
 March Machine Learning Mania 2017 (https://www.kaggle.com/c/march-machine-learning-mania-2017)
-All data needed data is available from them (they'd be here but their licensing prohibits it).
+All needed data is available on kaggle.com (their licensing prohibits sharing).
 
-This attempt is much simpler than my Non-negative matrix factorization, and PCA with season
-in season autoregressive (hot-streaks) tuning attempts. Here it is a
-Simple matrix hops power method that densely fill the team vs team laplacian matrix.
+This attempt is much simpler than my previous Non-negative matrix factorization, and PCA with
+in season, autoregressive (hot-streaks) learning. 
+
+This is a simple stable transition matrix generator for the all team-team incidence matrix. 
+The stable transitions are found via iteratively squaring the original graph laplacian matrix
+until it is dense and stable.
 
 Matchups are then used to predict the outcome of games in the
 tournament.
