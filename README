@@ -6,8 +6,14 @@ This attempt is much simpler than my previous Non-negative matrix factorization,
 in season, autoregressive (hot-streaks) learning. 
 
 This is a simple stable transition matrix generator for the all team-team incidence matrix. 
-The stable transitions are found via iteratively squaring the original graph laplacian matrix
-until it is dense and stable.
+Conceptually we have a directed graph of teams to teams. A positive edge is created between
+a team and the team they beat.  Naturally the graph laplacian is sparse, to make this matrix
+dense, it is multiplied by itself. The result is the bayesian belief propagation of all state 
+transisitons probabilities to the opponents of the opponents. This is similar to the strength 
+of schedule calculation, however the edge weights are based on scores, and we iterate the belief
+until a stable transition matrix is found. The stable transitions are found via iteratively 
+squaring the result of the previous squaring of the transition matrix (( (X^2)^2)...)^2 until 
+it is stable. 
 
 Matchups are then used to predict the outcome of games in the
 tournament.
